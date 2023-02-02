@@ -1,1 +1,1 @@
-The simple readme file is created for the assignment 
+*Weather App*
