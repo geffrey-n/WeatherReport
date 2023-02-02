@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/top.css">
+  <link rel="icon" type="image/x-icon" href="/Assets/HTML_CSS/Weather_Icons/precipitationIcon.svg">
+  <title>Weather Report</title>
+</head>
+
+<body>
+  <div class="entire-body">
+    <!-- Beginning of Top portion -->
+    <section class="top-section">
+      <div class="top-portion">
+        <!-- Left top portion -->
+        <div class="top-portion-left">
+          <!-- City Icon -->
+          <img class="city-icon" src="./Assets/HTML_CSS/Icons_for_cities/kolkata.svg" alt="kolkata-image">
+          <!-- Drop-down for city selection -->
+          <div class="city-name" data-tooltip="Select the city you want">
+            <form>
+              <input list="city-names" name="city-names" autocomplete="off" id="city-name-background" value="Kolkata"
+                onfocus="this.value=''" onchange="this.blur();">
+              <datalist id="city-names">
+              </datalist>
+            </form>
+          </div>
+          <br>
+          <p class="error"></p>
+          <!-- Time and Date -->
+          <div class="time-date">
+            <div class="hrs-mins-secs">
+              <span class="hrs-mins">10 : 10</span>
+              <span class="seconds">: 44</span>
+            </div>
+            <img class="time-icon" src="./Assets/HTML_CSS/General_Images_Icons/amState.svg">
+            <span class="date">01-Mar-2020</span>
+          </div>
+          <!-- Temperature and Humidity -->
+          <div class="temperature-humidity">
+            <p class="temp-c">Temp <span>&#176;</span>C</p>
+            <p class="temperature-c">25 C</p>
+            <p class="temp-f">Temp F</p>
+            <p class="temperature-f">78 F</p>
+            <div class="border1">
+              <p class="humidity">Humidity</p>
+            </div>
+            <p class="humidvalue">26<span>%</span></p>
+            <p class="precipitation">Precipitation</p>
+            <div class="border2">
+              <p class="preciptvalue">0<span>%</span></p>
+            </div>
+          </div>
+        </div>
+        <!-- Right top portion-->
+        <div class="top-portion-right">
+          <!-- Forcast Container -->
+          <div class="report-container" data-tooltip1="Forecast Report">
+            <div class="item-1 item">Now</div>
+            <div class="line-1">|</div>
+            <div class="image-1">
+              <img class="image--1 x" src="./Assets/HTML_CSS/Weather_Icons/cloudyIcon.svg">
+            </div>
+            <div class="number-1 number">6</div>
+            <div class="line-2">|</div>
+            <div class="item-2 item">11 AM</div>
+            <div class="line-3">|</div>
+            <div class="image-2">
+              <img class="image--2 x" src="./Assets/HTML_CSS/Weather_Icons/rainyIcon.svg">
+            </div>
+            <div class="number-2 number">7</div>
+            <div class="line-4">|</div>
+            <div class="item-3 item">12 PM</div>
+            <div class="line-5">|</div>
+            <div class="image-3">
+              <img class="image--3 x" src="./Assets/HTML_CSS/Weather_Icons/windyIcon.svg">
+            </div>
+            <div class="number-3 number">7</div>
+            <div class="line-6">|</div>
+            <div class="item-4 item">1 PM</div>
+            <div class="line-7">|</div>
+            <div class="image-4">
+              <img class="image--4 x" src="./Assets/HTML_CSS/Weather_Icons/rainyIcon.svg">
+            </div>
+            <div class="number-4 number">8</div>
+            <div class="line-8">|</div>
+            <div class="item-5 item">2 PM</div>
+            <div class="line-9">|</div>
+            <div class="image-5">
+              <img class="image--5 x" src="./Assets/HTML_CSS/Weather_Icons/windyIcon.svg">
+            </div>
+            <div class="number-5 number">8</div>
+            <div class="line-10">|</div>
+            <div class="item-6 item">3 PM</div>
+            <div class="line-11">|</div>
+            <div class="image-6">
+              <img class="image--6 x" src="./Assets/HTML_CSS/Weather_Icons/rainyIcon.svg">
+            </div>
+            <div class="number-6 number">6</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Top Portion -->
+    <!-- Beginning of Middle Portion -->
+    <section class="middle-section">
+      <!-- Top of Middle Portion -->
+      <div class="middle-portion">
+        <span class="title">Top cities around world</span>
+        <div class="weathericon-displaytop">
+          <div class="weather-icons">
+            <img class="sun" src="./Assets/HTML_CSS/Weather_Icons/sunnyIcon.svg">
+            <img class="snow" src="./Assets/HTML_CSS/Weather_Icons/snowflakeIcon.svg">
+            <img class="rain" src="./Assets/HTML_CSS/Weather_Icons/rainyIcon.svg">
+          </div>
+          <span class="display-top">Display Top</span>
+        </div>
+        <input class="display-topvalue" type="number" min="3" max="10" name="number of displaytop" value="4">
+        <!-- Bottom of Middle Portion-->
+        <!-- 1st part of bottom middle portion-->
+        <div class="topcities">
+          <!-- Arrow in the Left -->
+          <div class="arrow-left">
+            <img class="arrow--left" src="./Assets/HTML_CSS/General_Images_Icons/arrowleft.svg">
+          </div>
+          <div class="cities-card">
+          </div>
+          <!-- Arrow in the Right -->
+          <div class="arrow-right">
+            <img class="arrow--right" src="./Assets/HTML_CSS/General_Images_Icons/arrowright.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Middle Portion -->
+    <!-- Beginning of Bottom Portion -->
+    <section class="bottom-section">
+      <div class="bottom-portion">
+        <!-- Bottom Top -->
+        <div class="bottom-top">
+          <span class="bottom-title">Cities across continents at a Glance</span>
+          <div class="continent-name">
+            <span class="continent--name">Continent Name</span>
+            <img class="continent-arrow" src="./Assets/HTML_CSS/General_Images_Icons/arrowUp.svg">
+          </div>
+          <div class="temperature-name">
+            <span class="temperature--name">Temperature</span>
+            <img class="temperature-arrow" src="./Assets/HTML_CSS/General_Images_Icons/arrowUp.svg">
+          </div>
+        </div>
+        <!-- Bottom -->
+        <div class="bottom">
+        </div>
+    </section>
+    <!-- End of Bottom Portion-->
+  </div>
+  <!-- Importing the JS file -->
+  <script type="module" src="./Scripts/Top_Section/top.js"></script>
+  <script type="module" src="./Scripts/Middle_Section/middle.js"></script>
+  <script type="module" src="./Scripts/Bottom_Section/bottom.js"></script>
+</body>
+
+</html>

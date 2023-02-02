@@ -1,0 +1,108 @@
+/*Bottom portion*/
+.bottom-section {
+  background-color: var(--blackbacground);
+}
+.bottom-portion {
+  padding-left: 7vw;
+  display: inline-grid;
+  grid-template-columns: 80vw;
+  grid-template-rows: 4vw 45vw;
+  background-color: var(--blackbacground);
+  color: var(--fontcolor);
+  font-family: var(--fontstyle);
+}
+/*Top of the Bottom Portion*/
+.bottom-top {
+  display: inline-grid;
+  grid-template-columns: 58vw 16.5vw 11vw;
+}
+.bottom-title {
+  font-size: 2.5vw;
+}
+.continent-name {
+  font-size: 1.5vw;
+}
+.continent-arrow {
+  height: 1.4vw;
+  width: 1.5vw;
+}
+.temperature-name {
+  font-size: 1.5vw;
+}
+.temperature-arrow {
+  height: 1.4vw;
+  width: 1.5vw;
+}
+/*Bottom*/
+.bottom {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 25vw);
+  grid-template-rows: repeat(4, 7vw);
+  row-gap: 4vw;
+  column-gap: 5vw;
+  padding-top: 1.5vw;
+}
+/*Content of the Bottom*/
+.continent {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 60% 40%;
+  background-color: var(--backgroundtext);
+  padding: 0.7vw;
+}
+.continentname {
+  color: yellow;
+  font-size: 2vw;
+}
+.state-name-time {
+  grid-area: 2/1/3/2;
+  font-size: 1.5vw;
+}
+.state-temperature {
+  grid-area: 1/2/2/3;
+  text-align: right;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.state-humidity {
+  text-align: right;
+  grid-area: 2/2/3/3;
+  font-size: 1.5vw;
+}
+.state-humidityvalue {
+  display: inline;
+}
+.statehumidityimage {
+  position: relative;
+  top: 0.2vw;
+  height: 1.3vw;
+}
+/*hovering effect*/
+.continent:hover {
+  transform: scale(1.1, 1.1);
+  background-color: rgb(128, 128, 128, 0.3);
+  animation-name: scale;
+  box-shadow: -0.5vw 0vw yellow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes scale {
+  50% {
+    background-color: rgb(128, 128, 128, 0.7);
+  }
+}
+/*Media Query for Bottom Portion*/
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .bottom-portion {
+    grid-template-rows: 4vw 76vw;
+  }
+  .bottom {
+    grid-template-columns: repeat(2, 35vw);
+    grid-template-rows: repeat(6, 9vw);
+    row-gap: 3vw;
+    column-gap: 5vw;
+    padding-top: 1.5vw;
+    padding-left: 5vw;
+  }
+}
